@@ -474,7 +474,7 @@ void ChallengeScreen::Draw(Graphics* g)
 
 	int aTrophiesGot = mApp->GetNumTrophies(mPageIndex);
 	int aTrophiesTotal = mApp->GetTotalTrophies(mPageIndex);
-	TodDrawString(g, aTrophiesTotal > 0 ? StrFormat(_S("%d/%d"), aTrophiesGot, aTrophiesTotal) : TodStringTranslate(_S("[TROPHY_NONE]")), 739, 73, Sexy::FONT_DWARVENTODCRAFT12, Color(255, 240, 0), DS_ALIGN_CENTER);
+	TodDrawString(g, aTrophiesTotal > 0 ? StrFormat(_S("%d/%d"), aTrophiesGot, aTrophiesTotal) : TodStringTranslate(_S("[TROPHY_NONE]")), 739, 73, Sexy::FONT_DWARVENTODCRAFT15, Color(255, 240, 0), DS_ALIGN_CENTER);
 	TodDrawImageScaledF(g, Sexy::IMAGE_TROPHY, 718, 26, 0.5f, 0.5f);
 
 	int aHighestColumn = 0;
