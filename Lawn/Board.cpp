@@ -7170,7 +7170,10 @@ void Board::DrawTopRightUI(Graphics* g)
 		g->SetColorizeImages(true);
 		g->SetColor(GetFlashingColor(mMainCounter, 75));
 	}
-
+	
+	mMenuButton->Draw(g);
+	if (HAS_FAST_FORWARD_BUTTON)
+		mFastButton->Draw(g);
 	g->SetColorizeImages(false);
 
 	if (mStoreButton && mApp->mGameMode != GameMode::GAMEMODE_CHALLENGE_LAST_STAND)
@@ -7422,10 +7425,6 @@ void Board::DrawUITop(Graphics* g)
 	{
 		DrawTopRightUI(g);
 	}
-
-	mMenuButton->Draw(g);
-	if (HAS_FAST_FORWARD_BUTTON)
-		mFastButton->Draw(g);
 
 	if (mTimeStopCounter > 0)
 	{
