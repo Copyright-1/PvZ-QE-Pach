@@ -1,6 +1,6 @@
 #include "Flags.cpp"
-#include "XMLParser.cpp"
-#include "XMLWriter.cpp"
+//#include "XMLParser.cpp"
+//#include "XMLWriter.cpp"
 #include "SexyMatrix.cpp"
 #include "SEHCatcher.cpp"
 #include "PropertiesParser.cpp"

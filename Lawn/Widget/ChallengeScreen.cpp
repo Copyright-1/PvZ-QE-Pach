@@ -410,7 +410,7 @@ void ChallengeScreen::DrawButton(Graphics* g, int theChallengeIndex)
 
 			bool aHighLight = aChallengeButton->mIsOver && theChallengeIndex != mUnlockChallengeIndex;
 			g->SetColorizeImages(false);
-			g->DrawImage(aHighLight ? Sexy::IMAGE_CHALLENGE_WINDOW : Sexy::IMAGE_CHALLENGE_WINDOW_HIGHLIGHT, aPosX - 6, aPosY - 2);
+			g->DrawImage(aHighLight ? Sexy::IMAGE_CHALLENGE_WINDOW_HIGHLIGHT : Sexy::IMAGE_CHALLENGE_WINDOW, aPosX - 6, aPosY - 2);
 
 			Color aTextColor = aHighLight ? Color(250, 40, 40) : Color(42, 42, 90);
 			SexyString aName = TodStringTranslate(aDef.mChallengeName);

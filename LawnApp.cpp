@@ -2441,20 +2441,7 @@ bool LawnApp::UpdateApp()
 		return false;
 	}
 
-	//if (mLoadingThreadCompleted)
-	//{
-	//	LoadingThreadCompleted();
-	//}
-
-	bool updated = SexyAppBase::UpdateApp();
-
-
-	//if (mLoadingThreadCompleted && !mExitToTop)
-	//{
-	//	CheckForUpdates();
-	//}
-
-	return updated;
+	return SexyAppBase::UpdateApp();
 }
 
 

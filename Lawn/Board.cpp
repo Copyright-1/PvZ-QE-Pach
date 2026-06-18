@@ -7164,7 +7164,9 @@ void Board::DrawTopRightUI(Graphics* g)
 			mStoreButton->mX = 678;
 		}
 	}
-
+	mMenuButton->Draw(g);
+	if (HAS_FAST_FORWARD_BUTTON)
+		mFastButton->Draw(g);
 	if (mTutorialState == TutorialState::TUTORIAL_ZEN_GARDEN_COMPLETED)
 	{
 		g->SetColorizeImages(true);
@@ -7423,9 +7425,7 @@ void Board::DrawUITop(Graphics* g)
 		DrawTopRightUI(g);
 	}
 
-	mMenuButton->Draw(g);
-	if (HAS_FAST_FORWARD_BUTTON)
-		mFastButton->Draw(g);
+	
 
 	if (mTimeStopCounter > 0)
 	{
