@@ -177,5 +177,5 @@ void UserDialog::EditWidgetText(int theId, const SexyString& theString)
 
 bool UserDialog::AllowChar(int theId, SexyChar theChar)
 {
-    return isdigit(theChar);
+    return isdigit((unsigned char)theChar);
 }

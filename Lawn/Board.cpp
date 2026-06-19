@@ -7720,7 +7720,7 @@ static void TodCrash()
 void Board::KeyChar(SexyChar theChar)
 {
 	bool aCanUseKeybinds = mApp->mBankKeybinds && (!mPaused || mApp->mGameScene == GameScenes::SCENE_PLAYING || mApp->mCrazyDaveState != CrazyDaveState::CRAZY_DAVE_OFF);
-	if (isdigit(theChar) && aCanUseKeybinds && mSeedBank->mY >= 0)
+	if (isdigit((unsigned char)theChar) && aCanUseKeybinds && mSeedBank->mY >= 0)
 	{
 		for (int i = 0; i < mSeedBank->mNumPackets; i++)
 		{

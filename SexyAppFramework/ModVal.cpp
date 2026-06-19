@@ -72,7 +72,7 @@ static bool ParseModValString(std::string &theStr, int *theCounter = NULL, int *
 			aPos--;
 			foundComma = true;
 		}
-		else if (isdigit(theStr[aPos]))
+		else if (isdigit((unsigned char)theStr[aPos]))
 			aPos--;
 		else
 			break;
