@@ -316,7 +316,7 @@ SexyAppBase::SexyAppBase()
 	mResourcesPath = "properties\\resources.xml";
 	mCursor = nullptr;
 	mCustomCursor = false;
-	mProdName = "PlantsVsZombies";
+	mProdName = "PlantsVsZombiesQE";
 	mRegKey = "PopCap\\PlantsVsZombies";
 
 	int i;
@@ -6261,7 +6261,7 @@ void SexyAppBase::Init()
 	InitPropertiesHook();
 	ReadFromRegistry();
 
-	//  	if (CheckForVista())
+	if (CheckForVista())
 	{
 		HMODULE aMod;
 		SHGetFolderPathFunc aFunc = (SHGetFolderPathFunc)GetSHGetFolderPath("shell32.dll", &aMod);
@@ -6272,8 +6272,8 @@ void SexyAppBase::Init()
 		{
 			char aPath[MAX_PATH];
 			aFunc(NULL, CSIDL_COMMON_APPDATA, NULL, SHGFP_TYPE_CURRENT, aPath);
-
-			SetAppDataFolder("appdata\\");
+			SexyString aDataPath = RemoveTrailingSlash(aPath) + _S("\\") + mFullCompanyName + _S("\\") + mProdName;
+			SetAppDataFolder(aDataPath + "\\");
 			if (mDemoFileName.length() < 2 || (mDemoFileName[1] != ':' && mDemoFileName[2] != '\\'))
 			{
 				mDemoFileName = GetAppDataFolder() + mDemoFileName;

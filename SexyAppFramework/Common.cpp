@@ -97,7 +97,7 @@ std::string Sexy::GetAppDataFolder()
 
 void Sexy::SetAppDataFolder(const std::string& thePath)
 {
-// 	if (CheckForVista())
+ 	if (CheckForVista())
 	{
 		std::string aPath = thePath;
 		if (!aPath.empty())
