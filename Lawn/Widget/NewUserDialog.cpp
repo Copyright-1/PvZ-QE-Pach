@@ -62,7 +62,7 @@ void NewUserDialog::EditWidgetText(int theId, const SexyString& theString)
 
 bool NewUserDialog::AllowChar(int, SexyChar theChar)
 {
-	return isalnum((unsigned char)theChar) || theChar == _S(' ');
+	return isalnum(theChar) || theChar == _S(' ');
 }
 
 SexyString NewUserDialog::GetName()

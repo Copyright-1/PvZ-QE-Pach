@@ -573,7 +573,7 @@ bool XMLParser::NextElement(XMLElement* theElement)
 						{
 							theElement->mType = XMLElement::TYPE_INSTRUCTION;
 						}
-						else if (::isspace((unsigned char)c))
+						else if (::isspace((uchar)c))
 						{
 							if (theElement->mValue != _S(""))
 								hasSpace = true;

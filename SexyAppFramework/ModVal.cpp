@@ -255,7 +255,7 @@ static bool ModStringToInteger(const char* theString, int* theIntVal)
 
 	unsigned i = 0;
 
-	if (isalpha((unsigned char)theString[i]) || theString[i]=='_') // enum
+	if (isalpha(theString[i]) || theString[i]=='_') // enum
 	{
 		
 		std::string aStr;
